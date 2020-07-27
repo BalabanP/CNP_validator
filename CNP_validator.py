@@ -108,8 +108,9 @@ def main_validator(CNP):
 class TestValidator(unittest.TestCase):
 
     def test_CNP(self):
-        self.assertEqual(main_validator('1920314410084'), 'CNP Valid')
-        self.assertEqual(main_validator('8980816400023'), 'CNP Valid')
+        #adaugati intre '' CNP-ul dorit de  a fi verificat 
+        self.assertEqual(main_validator(''), 'CNP Valid')
+        self.assertEqual(main_validator(''), 'CNP Valid')
 
 if __name__ == '__main__':
     unittest.main()
